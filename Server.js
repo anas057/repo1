@@ -45,7 +45,7 @@ app.post('/upload', upload.single('profile'), (req, res) => {
   try {
     if (req.file) {
       const originalFilename = req.file.originalname;
-      const extension = path.extname(originalFilename); // Get extension
+      const extension = path.extname(originalFilename);
 
       // Create new filename with extension
       const newFilename = `${req.file.filename}${extension}`;
